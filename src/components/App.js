@@ -1,6 +1,7 @@
 import Component from './Component.js';
 import Header from './Header.js';
 import DrinkList from './DrinkList.js';
+import api from '../services/api.js';
 
 class App extends Component {
     render() {
@@ -12,11 +13,18 @@ class App extends Component {
         const main = dom.querySelector('main');
         dom.insertBefore(headerDOM, main);
 
-        const drinkList = new DrinkList();
-        const drinkListDOM = drinkList.render();
-        main.appendChild(drinkListDOM);
+        const drinkList = new DrinkList({ cocktail: {drinks: [] } });
+        main.appendChild(drinkList.render());
 
+        function loadDrink() {
+            api.getDrink()
+                .then(drinks => {
+                    drinkList.update({ cocktail:drinks });
+                });
+        }
         
+        loadDrink();
+
         return dom;
     }
     renderTemplate() {
