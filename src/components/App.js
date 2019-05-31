@@ -1,5 +1,6 @@
 import Component from './Component.js';
 import Header from './Header.js';
+import DrinkList from './DrinkList.js';
 
 class App extends Component {
     render() {
@@ -10,6 +11,10 @@ class App extends Component {
 
         const main = dom.querySelector('main');
         dom.insertBefore(headerDOM, main);
+
+        const drinkList = new DrinkList();
+        const drinkListDOM = drinkList.render();
+        main.appendChild(drinkListDOM);
 
         
         return dom;
