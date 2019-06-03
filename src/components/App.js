@@ -18,7 +18,7 @@ class App extends Component {
         const loading = new Loading({ done: false });
         main.appendChild(loading.render());
         
-        const drinkList = new DrinkList({ cocktail: {drinks: [] } });
+        const drinkList = new DrinkList({ cocktail: { drinks: [] } });
         main.appendChild(drinkList.render());
 
         function loadDrink() {
