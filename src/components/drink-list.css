@@ -12,10 +12,10 @@ ul li {
 }
  li img {
      width: 300px;
-     opacity: .5;
+     opacity: .7;
  }
 li img:hover {
-    opacity: .8;
+    opacity: .9;
 }
  li section {
      padding: 10px;
