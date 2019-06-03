@@ -1,0 +1,22 @@
+ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+ul li {
+    border: 1px solid black;
+    width: 300px;
+    text-align: center;
+    margin: 0 3px 3px 0;
+}
+ li img {
+     width: 300px;
+     opacity: .7;
+ }
+li img:hover {
+    opacity: .9;
+}
+ li section {
+     padding: 10px;
+ }
